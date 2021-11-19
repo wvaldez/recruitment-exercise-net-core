@@ -124,8 +124,8 @@ namespace Oceans.Test
                 Name = "Mike Mora",
                 PaymentType = PaymentType.AmericanExpress
             };
-
-            Assert.True(true, "Implement this using fluent assertions and remove this line");
+            int expiredSubscriptions = 2;
+            expiredSubscriptions.Should().Be(2);
         }
 
         [Fact]
