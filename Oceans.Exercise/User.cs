@@ -49,7 +49,7 @@ namespace Oceans.Exercise
         {
             const string strForExercise = "1";
 
-            if (int.TryParse(strForExercise, out int myOutputVariable))
+            if (int.TryParse(strForExercise, out int _))
             {
                 Name = "Oceans Code Experts";
             }
