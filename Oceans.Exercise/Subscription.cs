@@ -1,4 +1,6 @@
-﻿namespace Oceans.Exercise
+﻿using System;
+
+namespace Oceans.Exercise
 {
     public class Subscription
     {
@@ -16,6 +18,12 @@
         /// The year the subscription expires
         /// </summary>
         internal int ExpirationYear { get; }
+
+        public bool IsExpired()
+        {
+            var expirationDate = new DateTime(this.ExpirationYear, this.ExpirationMonth, DateTime.DaysInMonth(this.ExpirationYear, this.ExpirationMonth));
+            return DateTime.Now > expirationDate;
+        }
 
         /// <summary>
         /// Creates a new instance of the <see cref="Subscription" /> class.
